@@ -3,3 +3,4 @@
 
 ## Projects
 Day 1: Band name generator
+Day 2: Tip calculator
