@@ -8,3 +8,4 @@
 - Day 2: Tip calculator
 - Day 3: Treasure Island
 - Day 4: Rock Paper Scissors
+- Day 5: Password generator
