@@ -10,3 +10,4 @@
 - Day 4: Rock Paper Scissors
 - Day 5: Password generator
 - Day 6: Reeborg's World (Maze)
+- Day 7: Hangman
