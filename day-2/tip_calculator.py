@@ -32,9 +32,12 @@ def restaurant_bill_calculator() -> None:
     percentage = float(input("What percentage would you like to tip? 15, 18, or 20?\n"))
     people = int(input("How many people are splitting the bill?\n"))
 
-    print(
-        f"Each person should pay ${split_bill(add_tip(bill, percentage), people):.2f}."
-    )
+    total_bill = add_tip(bill, percentage)
+
+    if people == 1:
+        print(f"You should pay ${total_bill:.2f}.")
+    else:
+        print(f"Each person should pay ${split_bill(total_bill, people):.2f}.")
 
 
 if __name__ == "__main__":
