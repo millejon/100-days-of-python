@@ -5,12 +5,12 @@ def treasure_island() -> None:
     """Play Treasure Island, a choose your own adventure terminal game."""
     print(art.island)
     print("Welcome to Treasure Island! Can you find the hidden treasure?")
+
     print(
         "\nYour boat lands on the rocky shore of a secluded desert island.\n"
         "After disembarking, you see a path that leads into the jungle.\n"
         "You continue down the path until you reach a crossroads."
     )
-
     direction = input(
         "Which direction do you want to go next? Left or right?\n"
     ).lower()
@@ -26,7 +26,6 @@ def treasure_island() -> None:
             "You can wait to find out or you can try your luck swimming to the "
             "island."
         )
-
         lake = input("What do you want to do? Wait or swim?\n").lower()
 
         if lake == "wait":
@@ -41,7 +40,6 @@ def treasure_island() -> None:
                 "that gives off\nsuper creepy vibes. This must be it.\n"
                 "Upon entering the ruins, you are presented with three doors."
             )
-
             door = input(
                 "Which door are you going through? Red, blue, or yellow?\n"
             ).lower()
@@ -54,11 +52,9 @@ def treasure_island() -> None:
                     "Now you just have to figure out how you're going to get "
                     "it off the island."
                 )
-
             elif door == "red":
                 print(art.arrow)
                 print("Ouch, you took an arrow straight to the face.\nGame over.")
-
             elif door == "blue":
                 print(art.death)
                 print(
@@ -67,7 +63,6 @@ def treasure_island() -> None:
                     "were just going to Vegas with your friends.\n"
                     "Game over."
                 )
-
             else:
                 print(art.driven_mad)
                 print(
@@ -84,7 +79,6 @@ def treasure_island() -> None:
                 "You didn't even make it halfway across before becoming lunch.\n"
                 "Game over."
             )
-
         else:
             print(art.necromancers)
             print(
@@ -100,7 +94,6 @@ def treasure_island() -> None:
             "King, and he\nlikes exotic food.\n"
             "Game over."
         )
-
     else:
         print(art.maneaters)
         print(
