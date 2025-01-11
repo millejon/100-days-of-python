@@ -2,13 +2,14 @@ import random
 
 import ascii_art as art
 
+GAME_MOVES = [art.rock, art.paper, art.scissors]
+
 
 def rock_paper_scissors() -> None:
     """Play Rock Paper Scissors against the computer."""
-    game_moves = [art.rock, art.paper, art.scissors]
     random.seed()
-
     print("Welcome to Rock Paper Scissors!")
+
     player_move = input(
         "Which move are you going to make?\n"
         "Type 0 for Rock, 1 for Paper, or 2 for Scissors.\n"
@@ -20,11 +21,11 @@ def rock_paper_scissors() -> None:
             "Type 0 for Rock, 1 for Paper, or 2 for Scissors.\n"
         )
 
-    player = game_moves[int(player_move)]
-    computer = random.choice(game_moves)
+    player = GAME_MOVES[int(player_move)]
+    computer = random.choice(GAME_MOVES)
 
-    print(f"Your move:{player}")
-    print(f"Computer's move:{computer}")
+    print(f"Your move: {player}")
+    print(f"Computer's move: {computer}")
 
     if player == computer:
         print("Draw!")
