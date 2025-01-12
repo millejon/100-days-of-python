@@ -2,7 +2,7 @@ import ascii_art as art
 
 
 def treasure_island() -> None:
-    """Play Treasure Island, a choose your own adventure terminal game."""
+    """Play Treasure Island, a Choose Your Own Adventure game."""
     print(art.island)
     print("Welcome to Treasure Island! Can you find the hidden treasure?")
 
@@ -98,7 +98,7 @@ def treasure_island() -> None:
         print(art.maneaters)
         print(
             "You decide to forge your own path.\n"
-            "You stumble into a grove of Maneaters.\n"
+            "You stumble into a grove of Man-Eaters.\n"
             "What a terrible decision.\n"
             "Game over."
         )
