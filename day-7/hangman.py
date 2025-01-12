@@ -1,24 +1,19 @@
 import random
 
 import ascii_art as art
-from words import words
-
-
-def get_random_word() -> str:
-    """Return word chosen at random."""
-    random.seed()
-    return random.choice(words).upper()
+import lexicon
 
 
 def hangman() -> None:
-    """Play Hangman, a word guessing terminal game."""
+    """Play Hangman, a word guessing game."""
+    random.seed()
     print(art.logo)
     print("Welcome to Hangman! Can you guess the word before it's too late?")
-
-    answer = get_random_word()
-    word_display = ["_" for _ in answer]
     lives = 6
     guessed_letters = []
+
+    answer = random.choice(lexicon.words).upper()
+    word_display = ["_" for char in answer]
 
     print(art.stages[lives])
     print(f"Word: {"".join(word_display)}")
@@ -31,7 +26,7 @@ def hangman() -> None:
             print(f"You already guessed {guess}!")
         elif guess in answer:
             for index, letter in enumerate(answer):
-                if letter == guess:
+                if guess == letter:
                     word_display[index] = guess
         else:
             lives -= 1
